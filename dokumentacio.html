@@ -9,8 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: rgba(238, 247, 252, 1);
+        html{
+            height: 100%;
+        }
+
+        body{
+            background-image: linear-gradient(rgba(199, 239, 255, 1), rgba(51, 197, 255, 1));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
     </style>
 </head>
@@ -33,9 +39,72 @@
     </div>
     <div class="grid">
         <div class="dokumentaciopanel">
-            
+            <h1 style="text-align: center;">A weboldal felépítésének menete<hr></h1>
+            <p>
+                A portfólió tervezésénél mindenképpen egy letisztult, egyszerű ám
+                minőségi dizájnt képzeltem el, melyben az elemek színben,
+                formában és a szimmetriát tekintve összhangban vannak.<br>
+                A hátteret olyannak szerettem volna beállítani, hogy
+                ne legyen zavaróan figyelemfelhívó, ám mégis kellemes hangulatot
+                nyújtson az oldalt megtekintőknek,<br>illetve persze illeszkedjen
+                a kék színspektrumhoz, amellyel dolgoztam.<hr>
+            </p>
+            <p style="font-weight: bolder;">
+                A kód felépítését megelőzően a következő tervet készítettem paint-ben:
+            </p>
+                <img src="kepek/terv.jpg" alt="Hiba a kép betöltése közben">
+            <p>
+                Nagyrészt sikerült hű maradnom hozzá, azonban akadtak néha problémák
+                és természetesen pár előre nem átgondolt dolog is olykor meglepetést okozott.<br>
+                Második tervet már nem csináltam, valamint az összes aloldal alapvető
+                kinézete megegyezik, ezért csak egy kép ábrázolja az elképzelést,
+                mely a főoldalra vonatkozik.<hr>
+            </p>
+            <p>
+                Az ötleteket, melyek eszembe jutottak, megvalósítottam, a kisebb problémákat
+                megoldottam.<br>
+                A nem várt dolgokkal tudás és idő szűkében kénytelen voltam
+                megbarátkozni, és egyszerűbb megoldáshoz folyamodni.<br>
+            </p>
+            <p style="font-weight: bolder;">
+                Ezek a következők:
+            </p>
+            <table style="width: 100%;">
+                <tr>
+                    <th style="width: 50%; text-align: center;">+</th>
+                    <th style="width: 50%; text-align: center;">-</th>
+                </tr>
+                <tr>
+                    <td style="width: 50%; text-align: center;">A menüsávban jelöltem az adott oldalon való tartózkodást.</td>
+                    <td style="width: 50%; text-align: center;">A vertikálisan hosszú oldalakra (galéria, dokumentáció)
+                        sajnos nem tudtam berakni a válaszott háttérképet,
+                        hiszen ismétli önmagát lefelé. Ezekben az esetekben
+                        átmenetes háttérrel helyettesítettem.
+                    </td style="width: 50%; text-align: center;">
+                </tr>
+                    <td style="width: 50%; text-align: center;">A menü linkjeire extra animációt kódoltam.</td>
+                    <td style="width: 50%; text-align: center;">A "Jónás Marcell - Portfólió" címet nem sikerült
+                    egyvonalba, balra tolva helyezni a menüsávban anélkül, hogy ne tolná el a linkeket, így végül kihagytam.</td>
+                </tr>
+            </table>
         </div>
     </div>
-    <button class="felgomb"><a href="#" style="color: black; vertical-align: middle;">&#5169;</a></button>
+    <button onclick="topFunction()" id="felgombid" title="Fel az oldal tetejére">&#5169;</button>
+    <script>
+        var felgomb = document.getElementById("felgombid");
+    
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                felgomb.style.display = "block";
+            } else {
+                felgomb.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.documentElement.scrollTop = 0;
+        }
+        </script>
 </body>
 </html>

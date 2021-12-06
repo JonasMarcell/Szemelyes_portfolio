@@ -136,8 +136,30 @@
     box-shadow: 0 0 6px black;
 }
 
-.felgomb{
-    display: flex;
+.dokumentaciopanel img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+table, th, td{
+    border-color: black;
+    border-radius: 10px;
+    border-style: ridge;
+    border-width: 2px;
+}
+
+th, td{
+    border-color: black;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#felgombid{
+    display: none;
     cursor: pointer;
     position: fixed;
     right: 50%;
@@ -148,21 +170,21 @@
     border-radius: 100%;
     font-size: 20px;
     font-weight: bolder;
-    border-style: ridge;
-    border-color: rgba(5, 118, 255, 0.76);
-    border-width: 2px;
     background-color: rgb(203, 228, 241);
     box-shadow: 0 0 6px black;
     align-items: center;
     line-height: 50%;
 }
 
-.felgomb a{
+#felgombid a{
     text-decoration: none;
     color: #000;
 }
 
-.felgomb:hover{
+#felgombid:hover{
+    border-style: ridge;
+    border-width: 2px;
+    border-color: rgba(5, 118, 255, 0.76);
     background-color: rgba(122, 185, 220, 1);
     transition-duration: .3s;
 }

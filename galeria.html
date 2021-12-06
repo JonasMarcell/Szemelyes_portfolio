@@ -9,8 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            background-color: rgba(238, 247, 252, 1);
+        html{
+            height: 100%;
+        }
+
+        body{
+            background-image: linear-gradient(rgba(199, 239, 255, 1), rgba(51, 197, 255, 1));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
     </style>
 </head>
@@ -33,7 +39,7 @@
     </div>
     <div class="grid">
         <div class="keppanel">
-            <!--<h1 style="text-align: center;">Képek</h1>-->
+            <h1 style="text-align: center;">Képek<hr></h1>
             <img src="fotok/1.JPG">
             <img src="fotok/2.JPG">
             <img src="fotok/3.JPG">
@@ -66,6 +72,22 @@
             <img src="fotok/30.JPG">
         </div>
     </div>
-<button class="felgomb"><a href="#" style="color: black; vertical-align: middle;">&#5169;</a></button>
+    <button onclick="topFunction()" id="felgombid" title="Fel az oldal tetejére">&#5169;</button>
+    <script>
+    var felgomb = document.getElementById("felgombid");
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            felgomb.style.display = "block";
+        } else {
+            felgomb.style.display = "none";
+        }
+    }
+    function topFunction() {
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
 </body>
 </html>
