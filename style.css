@@ -80,7 +80,6 @@
     box-sizing: border-box;
     width: 66%;
     height: auto;
-    /*min-height: 100%;*/
     background-color: rgba(204, 204, 204, 1);
     border-radius: 10px;
     padding: 30px;
@@ -126,6 +125,47 @@
     box-shadow: 0 0 6px black;
 }
 
+.kapcsolatpanel img{
+    width: 33%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.elerhetoseg{
+    display: flexbox;
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    width: 66%;
+    float: right;
+}
+
+.email b, .email p, .email img{
+    margin-top: 50px;
+    display: inline-flex;
+}
+
+.email img{
+    height: auto;
+    width: auto;
+}
+
+.instagram b, .instagram p, .instagram img{
+    margin-top: 50px;
+    display: inline-flex;
+}
+
+.instagram a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+}
+
+.instagram a:hover{
+    cursor: pointer;
+    text-shadow: 0 0 2px rgba(5, 118, 255, 0.76);
+}
+
 .dokumentaciopanel{
     background-color:rgb(203, 228, 241);
     display: flexbox;
@@ -156,6 +196,16 @@ th, td{
     border-radius: 10px;
     border-style: solid;
     border-width: 1px;
+}
+
+.dokumentaciopanel ul li a{
+    color: #000;
+    text-decoration: none;
+}
+
+.dokumentaciopanel ul li a:hover{
+    cursor: pointer;
+    text-shadow: 0 0 2px rgba(5, 118, 255, 0.76);
 }
 
 #felgombid{
